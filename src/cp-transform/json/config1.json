@@ -1,0 +1,72 @@
+{
+  "component": "profile-page",
+  "metaData": {
+    "label": "Profile Page"
+  },
+  "items": [
+    {
+      "component": "row",
+      "metaData": {
+        "cssClass": "top-row"
+      },
+      "items": [
+        {
+          "component": "column",
+          "items": [
+            {
+              "component": "text-input",
+              "metaData": {
+                "label": "First Name"
+              }
+            },
+            {
+              "component": "text-input",
+              "metaData": {
+                "label": "Last Name"
+              }
+            },
+            {
+              "component": "text-input",
+              "metaData": {
+                "label": "Email",
+                "dataField": "investorContact.email"
+              }
+            }
+          ]
+        },
+        {
+          "component": "column",
+          "items": [
+            {
+              "component": "text-input",
+              "metaData": {
+                "label": "Email",
+                "dataField": "investorContact.email"
+              }
+            },
+            {
+              "component": "text-input",
+              "metaData": {
+                "label": "Phone"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "row",
+      "metaData": {
+        "cssClass": "bottom-row"
+      },
+      "items": [
+        {
+          "component": "section",
+          "metaData": {
+            "label": "Section 2"
+          }
+        }
+      ]
+    }
+  ]
+}

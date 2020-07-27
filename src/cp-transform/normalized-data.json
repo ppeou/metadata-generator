@@ -1,0 +1,156 @@
+{
+  "componentTypeList": {
+    "cd-1": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-1",
+      "name": "profile-page"
+    },
+    "cd-2": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-2",
+      "name": "row"
+    },
+    "cd-3": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-3",
+      "name": "column"
+    },
+    "cd-4": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-4",
+      "name": "text-input"
+    },
+    "cd-5": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-5",
+      "name": "text-input"
+    },
+    "cd-6": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-6",
+      "name": "text-input"
+    },
+    "cd-7": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-7",
+      "name": "text-input"
+    },
+    "cd-8": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-8",
+      "name": "text-input"
+    },
+    "cd-9": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-9",
+      "name": "row"
+    },
+    "cd-10": {
+      "dbid": "component-type.next-id",
+      "ctid": "cd-10",
+      "name": "section"
+    }
+  },
+  "componentList": {
+    "ab-1": {
+      "dbid": "component.new-id",
+      "cid": "ab-1",
+      "ctid": "cd-1",
+      "componentType": "profile-page",
+      "profileValue": "{\"label\":\"Profile Page\"}"
+    },
+    "ab-2": {
+      "dbid": "component.new-id",
+      "cid": "ab-2",
+      "ctid": "cd-2",
+      "componentType": "row",
+      "profileValue": "{\"cssClass\":\"top-row\"}"
+    },
+    "ab-3": {
+      "dbid": "component.new-id",
+      "cid": "ab-3",
+      "ctid": "cd-3",
+      "componentType": "column"
+    },
+    "ab-4": {
+      "dbid": "component.new-id",
+      "cid": "ab-4",
+      "ctid": "cd-4",
+      "componentType": "text-input",
+      "profileValue": "{\"label\":\"First Name\"}"
+    },
+    "ab-5": {
+      "dbid": "component.new-id",
+      "cid": "ab-5",
+      "ctid": "cd-5",
+      "componentType": "text-input",
+      "profileValue": "{\"label\":\"Last Name\"}"
+    },
+    "ab-6": {
+      "dbid": "component.new-id",
+      "cid": "ab-6",
+      "ctid": "cd-6",
+      "componentType": "text-input",
+      "profileValue": "{\"label\":\"Email\",\"dataField\":\"investorContact.email\"}"
+    },
+    "ab-7": {
+      "dbid": "component.new-id",
+      "cid": "ab-7",
+      "ctid": "cd-7",
+      "componentType": "text-input",
+      "profileValue": "{\"label\":\"Email\",\"dataField\":\"SalesPerson.email\"}"
+    },
+    "ab-8": {
+      "dbid": "component.new-id",
+      "cid": "ab-8",
+      "ctid": "cd-8",
+      "componentType": "text-input",
+      "profileValue": "{\"label\":\"Phone\"}"
+    },
+    "ab-9": {
+      "dbid": "component.new-id",
+      "cid": "ab-9",
+      "ctid": "cd-9",
+      "componentType": "row",
+      "profileValue": "{\"cssClass\":\"bottom-row\"}"
+    },
+    "ab-10": {
+      "dbid": "component.new-id",
+      "cid": "ab-10",
+      "ctid": "cd-10",
+      "componentType": "section",
+      "profileValue": "{\"label\":\"Section 2\"}"
+    }
+  },
+  "preference": {
+    "id": "ab-1",
+    "items": [
+      {
+        "id": "ab-2",
+        "items": [
+          {
+            "id": "ab-3",
+            "items": [
+              "ab-4",
+              "ab-5",
+              "ab-6"
+            ]
+          },
+          {
+            "id": "ab-3",
+            "items": [
+              "ab-7",
+              "ab-8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ab-9",
+        "items": [
+          "ab-10"
+        ]
+      }
+    ]
+  }
+}
