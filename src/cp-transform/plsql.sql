@@ -12,19 +12,26 @@ DECLARE
     toBeDeleteCompTypeName VARCHAR2(4000);
     toBeDeleteCompName VARCHAR2(4000);
     sqlStr VARCHAR2(4000);
+    flag NUMBER;
 BEGIN
 
     DBMS_OUTPUT.PUT_LINE('Starting Data Insert:');
 
     components := stringArr('fi-db-c-101', 'comp-number', 'comp-date');
-    componentTypes := stringArr('fi-db-ct-201', 'number', 'date');
+    componentTypes := stringArr('text', 'number', 'date');
 
     DBMS_OUTPUT.PUT_LINE('--Getting ID for ComponentTypes:');
     FOR idx IN componentTypes.FIRST..componentTypes.LAST
         LOOP
             str := componentTypes(idx);
+            SELECT COUNT(ID) into flag from COMPONENT_TYPE WHERE NAME =str;
+            IF flag > 0 then
+                select ID into componentTypeId(str) from COMPONENT_TYPE WHERE NAME=str AND ROWNUM=1;
+            ELSE
+                componentTypeId(str) := COMPONENT_TYPE_ID.nextval;
+            END IF;
+
             toBeDeleteCompTypeName := toBeDeleteCompTypeName || ',''' || str || '''';
-            componentTypeId(str) := COMPONENT_TYPE_ID.nextval; --componentTypeId('text') = 1;
             DBMS_OUTPUT.PUT_LINE('----' || str || ': ' || componentTypeId(str));
         END LOOP;
     toBeDeleteCompTypeName := SUBSTR(toBeDeleteCompTypeName, 2);
@@ -57,7 +64,7 @@ BEGIN
 
     DBMS_OUTPUT.PUT_LINE('--Inserting Components:');
     insert into COMPONENT(id, name, type, profileValue) VALUES (componentId('comp-text'), 'comp-text',
-                                                  componentTypeId('text'), '{"label":"Profile Page"}');
+                                                                componentTypeId('text'), '{"label":"Profile Page"}');
     insert into COMPONENT(id, name, type) VALUES (componentId('comp-number'), 'comp-number', componentTypeId('number'));
     insert into COMPONENT(id, name, type) VALUES (componentId('comp-date'), 'comp-date', componentTypeId('date'));
 
